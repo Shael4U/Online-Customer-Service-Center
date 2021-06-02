@@ -85,6 +85,6 @@ public class OperatorServiceImpl implements OperatorService {
 		if(loginObj==null) {
 			throw new InvalidCredentialException("Credentials are not valid");
 		}
-		return "Welcome to the Hell";
+		return "Welcome";
 	}
 }

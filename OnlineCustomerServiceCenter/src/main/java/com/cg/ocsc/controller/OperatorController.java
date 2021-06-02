@@ -25,11 +25,15 @@ public class OperatorController {
 	@Autowired
 	private OperatorService opService;
 	
+	@GetMapping("/")
+	public String Home() {
+		return "YOU JUST GOT YOUR MISSING QUOTIENT OF HAPPINESS";
+	}
 	
-	@PostMapping("/login")
+	/*@PostMapping("/login")
 	public String login(@RequestBody Login login) throws InvalidCredentialException{
 		return opService.login(login);
-	}
+	}*/
 	
 	@PostMapping("/issue/create")
 	public Issues createCustomerIssue(@RequestBody Issues issue) {

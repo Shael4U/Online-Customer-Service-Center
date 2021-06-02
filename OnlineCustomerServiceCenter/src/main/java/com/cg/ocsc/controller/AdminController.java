@@ -51,7 +51,7 @@ public class AdminController {
               return new ResponseEntity<>("Department is updated successfully", HttpStatus.OK);
         }
 	}
-	@RequestMapping(value="/department/{id}", method=RequestMethod.GET)
+	@RequestMapping(value="/departmentById/{id}", method=RequestMethod.GET)
 	 public Department findDepartmentbyId(@PathVariable("id") int id) throws DepartmentNotFoundException {
 	
 	    Optional< Department> dept = adminService.findDepartmentById(id);
@@ -88,7 +88,7 @@ public class AdminController {
                  return new ResponseEntity<>("Operator is updated successfully", HttpStatus.OK);
             }
     	}
-        @RequestMapping(value= "/operator/{id}", method= RequestMethod.GET)
+        @RequestMapping(value= "/operatorById/{id}", method= RequestMethod.GET)
        public  Operator findOperatorById(@PathVariable int id) throws OperatorNotFoundException {
    Optional<Operator> opt=  adminService.findOperatorById(id);
              if(!opt.isPresent()) {
